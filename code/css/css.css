@@ -49,7 +49,8 @@
   }
   h2 {
     margin-top: 1rem;
-    font: normal 1.25rem/1 "PT Sans", Arial, sans-serif;
+    font: normal 1.5rem/1 "PT Sans", Arial, sans-serif;
+    font-variant: small-caps;
   }
   footer {
     padding: 0.25rem;
@@ -118,6 +119,7 @@
     margin-left: 1rem;
     margin-bottom: 0.25rem;
     font: bold 1rem "PT Serif", Garamond, serif;
+    letter-spacing: 0.0625rem;
   }
   .albumInfo li.listTitle {
     margin-left: 0;
