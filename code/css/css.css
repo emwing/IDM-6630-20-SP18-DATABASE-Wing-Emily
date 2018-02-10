@@ -1,0 +1,126 @@
+/* general stuff */
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    box-sizing: border-box;
+    font-family: "PT Sans", Arial, sans-serif;
+  }
+
+  *,
+  *:before,
+  *:after { box-sizing: inherit; }
+
+  svg,
+  img {
+    max-width: 100%;
+    image-rendering: -webkit-optimize-contrast; /* fix chrome's image sharpness per: https://medium.freecodecamp.org/-898b38a6c0e1 */
+  }
+
+  html,
+  body { background: #fffffe url("../img/asanoha-400px.png") repeat fixed; }
+
+  .pageWrap {
+    margin: 0 auto;
+    position: relative;
+    width: 90%;
+    max-width: 100rem;
+    background-color: #f4f5f6;
+  }
+  header {
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 0.375rem solid #80bac8;
+    background-color: #b7dde6;
+    text-align: center;
+    color: #1c6b7e;
+  }
+  h1 {
+    margin: 0;
+    font: normal 3rem/1 'Monoton', cursive;
+    letter-spacing: 0.125rem;
+  }
+  h2 {
+    margin-top: 1rem;
+    font: normal 1.25rem/1 "PT Sans", Arial, sans-serif;
+  }
+  footer {
+    padding: 0.25rem;
+    border-top: 0.0625rem solid #e4b751;
+    border-bottom: 0.0625rem solid #e4b751;
+    background-color: #ffefc9;
+    text-align: center;
+    color: #cb9a28;
+  }
+
+
+/* links
+  a {
+    font-weight: bold;
+    color: #1c6b7e;
+    text-decoration: none;
+  }
+  a:hover { color: #ececec; } */
+
+
+/* album stuff */
+  #albumContainers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+    align-items: stretch;
+  }
+  .albumItem {
+    margin: 1rem;
+    position: relative;
+    display: block;
+    flex: 1 250px;
+    text-align: center;
+    z-index: 10;
+  }
+  .albumItem img {
+    z-index: 100;
+    -webkit-filter: grayscale(0);
+    -moz-filter: grayscale(0);
+    filter: grayscale(0);
+    opacity: 1;
+    transition: all 1s ease;
+  }
+  .albumItem img:hover {
+    -webkit-filter: grayscale(1);
+    -moz-filter: grayscale(1);
+    filter: grayscale(1);
+    opacity: 0;
+  }
+
+  .albumInfo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 16rem;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    text-align: left;
+    color: #1c6b7e;
+    opacity: 1;
+    transition: all 1s ease;
+  }
+  .albumInfo ul { list-style-type: none; }
+  .albumInfo li {
+    margin-left: 1rem;
+    margin-bottom: 0.25rem;
+    font: bold 1rem "PT Serif", Garamond, serif;
+  }
+  .albumInfo li.listTitle {
+    margin-left: 0;
+    font: normal .875rem "PT Sans", Arial, sans-serif;
+  }
+  .albumInfo li:nth-of-type(even) { margin-top: 0.25rem; }
